@@ -1,0 +1,7 @@
+Copyright (c) 2026 Alessio Langiu / CNR-ISMAR / Homelab-OS
+
+This code and the underlying concepts, specifically the "Dual-Vault Architecture", "Holistic Contextual Observer", and the method of combining prompt decomposition with LIFO memory for "Token Parsimony" and "Zero Leakage" privacy guarantees, are proprietary and strictly confidential.
+
+You may not use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software without explicit written permission from the author.
+
+The concepts described herein are under evaluation for intellectual property protection and future spin-off ventures (PrivacyGuard AI). All rights are reserved.
