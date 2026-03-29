@@ -24,7 +24,9 @@ TIER0_API_KEY = os.getenv(
 )
 
 # Attori del Benchmark
-GUARD_MODEL = "qwen2.5-7b-instruct"  # Privacy Guard (Locale/Sedici - Consigliato Qwen 2.5 7B o Phi-3.5)
+GUARD_MODEL = (
+    "qwen2.5-7b-instruct"  # Privacy Guard (Locale/Sedici) - Qwen 2.5 7B per APO
+)
 JUDGE_MODEL = "qwen/qwen3-coder-30b"  # Valutatore (Locale/Sedici)
 TIER0_MODEL = "minimax-free"  # Cloud Economico (LiteLLM)
 
