@@ -24,7 +24,7 @@ TIER0_API_KEY = os.getenv(
 )
 
 # Attori del Benchmark
-GUARD_MODEL = "llama-3.2-1b-instruct"  # Privacy Guard (Locale/Sedici)
+GUARD_MODEL = "qwen2.5-7b-instruct"  # Privacy Guard (Locale/Sedici - Consigliato Qwen 2.5 7B o Phi-3.5)
 JUDGE_MODEL = "qwen/qwen3-coder-30b"  # Valutatore (Locale/Sedici)
 TIER0_MODEL = "minimax-free"  # Cloud Economico (LiteLLM)
 
@@ -105,8 +105,8 @@ def run_cloud_model(client: OpenAI, intent: str, context: str) -> str:
 
 
 def run_privacy_guard(client: OpenAI, intent: str, context: str) -> str:
-    """Llama 3.2 su Sedici: Scrubbing, Summarization & APO."""
-    prompt = f"""You are an advanced Privacy Guard and Automatic Prompt Optimizer (APO) operating in a Zero-Trust environment.
+    """Phi-3.5-mini su Sedici: Scrubbing, Summarization & APO."""
+    prompt = f"""You are a strict Privacy Guard and Automatic Prompt Optimizer (APO) operating in a Zero-Trust environment.
 Your task is to perform an abstractive summarization of the user's Context to fulfill their Intent efficiently.
 CRITICAL RULES:
 1. Remove all personal secrets (PII, health data, personal emails, pins).
@@ -122,8 +122,18 @@ Sanitized Context:"""
     try:
         response = client.chat.completions.create(
             model=GUARD_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.1,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a strict Privacy Guard and APO. Follow the critical rules perfectly. Output only the sanitized context.",
+                },
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.0,
+            top_p=0.1,
+            max_tokens=2048,
+            presence_penalty=0.0,
+            frequency_penalty=0.0,
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
