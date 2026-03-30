@@ -1,0 +1,32 @@
+# Virtual environment
+.venv/
+
+# Internal notebook generators (not needed for reproducibility)
+generate_notebook.py
+generate_notebook_1.py
+generate_notebook_2.py
+generate_combined_notebook.py
+
+# Old/superseded scripts
+evaluate_quality.py
+
+# Raw results data (too large, regenerate with scripts)
+*.jsonl
+*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Env files
+.env
+
+# Log and process files
+*.log
+*.pid
+
+# Benchmark result files (regenerate with scripts)
+benchmark_results*.log
+results.txt
