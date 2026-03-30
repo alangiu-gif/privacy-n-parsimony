@@ -1,4 +1,4 @@
-# Dual-Vault LLM Benchmark
+# Privacy Guard & Token Parsimony Framework
 
 Empirical benchmark suite for the **Privacy Guard & Token Parsimony** framework, accompanying the paper:
 
