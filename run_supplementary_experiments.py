@@ -150,9 +150,9 @@ def experiment_3_hybrid_architecture():
     # Comparing 4 architectures on the "Lost in the Middle" Institutional task
     architectures = [
         "SLM Only\n(8B Class)",
-        "Presidio\n(Deterministic)",
+        "Regex/Scanner\n(Deterministic)",
         "Frontier LLM\n(70B Class)",
-        "Hybrid\n(Presidio + 8B)",
+        "Hybrid\n(Regex + 8B)",
     ]
 
     leakage_rates = [33.3, 0.0, 1.2, 0.0]
