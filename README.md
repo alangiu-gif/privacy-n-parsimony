@@ -144,7 +144,7 @@ If you use this benchmark in your research, please cite:
 @misc{langiu2025privacyguard,
   title={Privacy Guard \& Token Parsimony by Prompt and Context Handling and LLM Routing},
   author={Langiu, Alessio},
-  year={2025},
+  year={2026},
   eprint={ARXIV_ID},
   archivePrefix={arXiv},
   primaryClass={cs.CR}
