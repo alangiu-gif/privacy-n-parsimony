@@ -4,7 +4,7 @@ Empirical benchmark suite for the **Privacy Guard & Token Parsimony** framework,
 
 > *Privacy Guard & Token Parsimony by Prompt and Context Handling and LLM Routing*
 > Alessio Langiu — CNR-ISMAR
-> Preprint: [arXiv link] | Code: this repository
+> Preprint: [arXiv link] | Code: [GitHub link] | Replication Bundle: [Zenodo DOI]
 
 ---
 
@@ -84,15 +84,19 @@ Set the model names inside each script or override via env vars as documented in
 ├── run_metric3_quality.py       # Metric 3: LLM-as-a-Judge quality evaluation
 ├── evaluate_answer_quality.py   # Lightweight 40-sample quality evaluation
 │
-├── test_sanitisation_30b.py     # Sanitisation test — 30B parameter model
-├── test_sanitisation_70b.py     # Sanitisation test — 70B parameter model (Llama 3.3)
-├── test_sanitisation_preliminary.py  # Exploratory scaling test (8B→104B)
+├── test_30b_sanitisation.py       # Sanitisation test — 30B parameter model
+├── test_frontier_sanitisation.py  # Sanitisation test — Frontier models (e.g., Llama 70B)
+├── preliminary_frontier_test.py   # Exploratory scaling test (8B→104B)
 ├── run_large_scale.py           # Large-scale overnight runner
 ├── exponential_scale_test.py    # Exponential scaling analysis
+│
+├── Supplementary_Experiments.ipynb # Analytical projections (LIFO, Latency, Hybrid)
+├── run_supplementary_experiments.py# Script for analytical projections plots
 │
 ├── generate_dataset.py          # Synthetic dataset generator (Faker)
 ├── generate_plots.py            # Plot generation from results
 ├── plot_exploratory.py          # Exploratory tier plots
+├── plot_architecture_v3.py      # System architecture flowchart generator
 │
 ├── print_results.py             # Print Colab/cloud benchmark results
 ├── print_local_results.py       # Print local benchmark results
