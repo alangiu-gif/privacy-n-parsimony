@@ -30,3 +30,4 @@ __pycache__/
 # Benchmark result files (regenerate with scripts)
 benchmark_results*.log
 results.txt
+benchmark_results.md
